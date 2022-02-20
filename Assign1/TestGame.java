@@ -1,5 +1,3 @@
-package Assign1;
-
 public class TestGame {
 
 	public static void main(String[] args) {
