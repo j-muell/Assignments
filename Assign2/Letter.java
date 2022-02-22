@@ -60,7 +60,7 @@ public class Letter {
 
         letters = new Letter[givenWord.length()]; // initialize the letters array with the legnth of the given word
 
-        for (int i = 0; i < givenWord.length() - 1; i++ ){   
+        for (int i = 0; i <= givenWord.length() - 1; i++ ){   
             letters[i] = new Letter(givenWord.charAt(i)); // each index of the letter array is given a new letter with 
                                                          // the character at that respective index
         }
