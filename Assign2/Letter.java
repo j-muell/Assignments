@@ -2,7 +2,7 @@ public class Letter {
     char letter;
     int label;
 
-    int UNSET, UNUSED, USED, CORRECT;
+    int UNSET=1, UNUSED=2, USED=3, CORRECT=4;
 
     public Letter(char c){
         label = UNSET;
@@ -22,11 +22,16 @@ public class Letter {
     }
 
     public String decorator(){
+        
         if (this.label == UNUSED) {
             return "-";
-        } else if (this.label == USED) {
+        } 
+
+        if (this.label == USED) {
             return "+";
-        } else if (this.label == UNSET) {
+        }
+        
+        if (this.label == UNSET) {
             return " ";
         }
 
