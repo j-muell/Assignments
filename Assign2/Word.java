@@ -100,9 +100,11 @@ public class Word {
 
             trueWordTemp = trueWordTemp.getNext();
         }
+
+
         thisTemp = this.firstLetter;
+        int correctLetters = 0;
         for (int k = 0; k <= thisWordSize - 1; k++) { // run through thisWord nodes
-            int correctLetters = 0;
             if (thisTemp.getElement().label == thisTemp.getElement().CORRECT) { // if the label is correct
                 correctLetters += 1;
             } else { // if label is ever not correct
@@ -111,10 +113,10 @@ public class Word {
             
             thisTemp = thisTemp.getNext(); // get next node
 
-            if (correctLetters == trueWordSize){
-                identical = true;
-            }
+        }
 
+        if (correctLetters == trueWordSize){
+            identical = true;
         }
 
         if (identical == true) { // in the end, if the node is still true
