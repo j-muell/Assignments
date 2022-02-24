@@ -1,6 +1,6 @@
 public class Word {
     //private this after
-    LinearNode<Letter> firstLetter = null; // head of list
+    private LinearNode<Letter> firstLetter = null; // head of list
     
     // Public main methods
 
