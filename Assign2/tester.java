@@ -1,8 +1,10 @@
+import javax.swing.event.SwingPropertyChangeSupport;
+
 public class tester {
     public static void main(String[] args) {
 
-        String testWord = "grandfather";
-        String mysteryWord = "grandfather";
+        String testWord = "object";
+        String mysteryWord = "code";
         
         Word test_word = new Word(Letter.fromString(testWord));
         Word mystery_word = new Word(Letter.fromString(mysteryWord));
@@ -15,10 +17,20 @@ public class tester {
         System.out.println(test_word);
         System.out.println(identical);
 
-        String[] strings = {"Testing", "Line", "Separator", "Function"};
-        String output = lineSeparating(strings);
 
-        System.out.println(output);
+
+        Word word1 = new Word(Letter.fromString("OBJECT"));
+		Word word2 = new Word(Letter.fromString("CLASS"));
+		Word word3 = new Word(Letter.fromString("CODE"));
+
+
+        word1.labelWord(word3); 
+
+        System.out.println(word1);
+        
+        boolean test = word1.toString().equals("falseWord: +O+ -B- -J- !E! +C+ -T- ");
+
+        System.out.println(test);
 
 
     }

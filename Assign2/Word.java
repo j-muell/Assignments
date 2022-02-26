@@ -34,7 +34,7 @@ public class Word {
 
         for (int i = 0; i < letterStrings.length; i++) {
             s += letterStrings[i];
-            if (i < letterStrings.length - 1) s+= " "; // keep a space if it is not the last element.
+            if (i < letterStrings.length) s+= " "; // add spaces to each index
         }
 
         return "Word: " + s; // finally, return the string with the proper formatting
@@ -115,7 +115,7 @@ public class Word {
 
         }
 
-        if (correctLetters == trueWordSize){
+        if (correctLetters == trueWordSize && thisWordSize == trueWordSize){
             identical = true;
         }
 
