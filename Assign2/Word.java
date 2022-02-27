@@ -52,6 +52,11 @@ public class Word {
 
         boolean identical = false;
 
+        for (int i = 0; i <= thisWordSize - 1; i++){ // Set this element to UNUSED
+            thisTemp.getElement().setUnused();
+            thisTemp = thisTemp.getNext();
+        }
+
         // UPDATE TAGS
         
         for (int i = 0; i <= trueWordSize - 1; i++) // loop through thisWord nodes
