@@ -5,7 +5,7 @@ public class ExtendedLetter extends Letter{
     private boolean related;
     private int SINGLETON = -1;
 
-    public ExtendedLetter(String s) {
+    public ExtendedLetter(String s) { // set variables contructor
         super(c);
 
         content = s;
@@ -13,7 +13,7 @@ public class ExtendedLetter extends Letter{
         family = SINGLETON;
     }
 
-    public ExtendedLetter(String s, int fam) {
+    public ExtendedLetter(String s, int fam) { // set varaibles constructor 2
         super(c);
 
         content = s;
@@ -22,20 +22,20 @@ public class ExtendedLetter extends Letter{
     }
 
     public boolean equals(Object other) {
-        if (other instanceof ExtendedLetter) {
-            ExtendedLetter obj = (ExtendedLetter) other;
-            if (this.family == obj.family) {
-                this.related = true;
+        if (other instanceof ExtendedLetter) { // if instanace of ExtendedLetter   
+            ExtendedLetter obj = (ExtendedLetter) other; // set obj to the other object
+            if (this.family == obj.family) {  // if  the family of both objects is equal
+                this.related = true; // true 
             }
 
             if (this.content == obj.content) {
-                return true;
+                return true; // if content equaal to content of other return true
             }
 
-            return false;
+            return false; // otherwise false
         }
 
-        return false;
+        return false; // otherwise false
     }
 
     public String toString() {

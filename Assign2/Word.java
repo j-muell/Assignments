@@ -158,7 +158,7 @@ public class Word {
     private int getListSize() {
         int numElements = 0;
 
-        LinearNode<Letter> temp = firstLetter;
+        LinearNode<Letter> temp = firstLetter; // Gets list size from linked list
 
         while (temp.getNext() != null)
         {

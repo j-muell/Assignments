@@ -12,9 +12,9 @@ public class WordLL {
     }
 
     public boolean tryWord(Word guess) {
-        boolean identical = guess.labelWord(mysteryWord);
+        boolean identical = guess.labelWord(mysteryWord); // Run label word
 
-        insertAtStart(guess);
+        insertAtStart(guess); // use insert function
 
         if (identical) {
             return true;
@@ -49,7 +49,7 @@ public class WordLL {
 
    // PRIVATE HELPER METHODS
 
-    private void insertAtStart(Word data) {
+    private void insertAtStart(Word data) { // Insert function to 
         LinearNode<Word> node = new LinearNode<>();
 
         node.setElement(data);
@@ -62,7 +62,7 @@ public class WordLL {
     private int getListSize() {
         int numElements = 0;
 
-        LinearNode<Word> temp = history;
+        LinearNode<Word> temp = history; // Get list size for the linked list
 
         while (temp.getNext() != null)
         {
