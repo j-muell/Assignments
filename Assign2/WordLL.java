@@ -1,6 +1,6 @@
 public class WordLL {
-    Word mysteryWord;
-    LinearNode<Word> history;
+    private Word mysteryWord;
+    private LinearNode<Word> history;
    
     // PUBLIC MAIN METHODS
 
