@@ -40,7 +40,7 @@ public class WordLL {
 
         for (int j = 0; j < wordStrings.length; j++) {
             s += wordStrings[j]; // save each index of the array into a string
-            if (j < wordStrings.length - 1); s += System.lineSeparator(); // this will print all of it on new lines
+            if (j < wordStrings.length - 1) s += System.lineSeparator(); // this will print all of it on new lines
         }
         
         return s;
