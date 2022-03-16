@@ -3,12 +3,24 @@ public class DLStack<T> implements DLStackADT<T>{
     private int numItems;
 
     public DLStack() {
-        /**
-         * Create an empty stack using doublylinkedlist
-         */
+        top = null; // create empty stack
+        numItems = 0;
     }
 
     public void push(T dataItem) {
+        DoubleLinkedNode<T> temp = new DoubleLinkedNode<>(dataItem);
+        
+        if (top == null) {
+            temp.setNext(null);
+            temp.setPrevious(null);
+            top = temp;
+            numItems++;
+        } else {
+            temp.setNext(top);
+            top.setPrevious(temp);
+            top = temp;
+            numItems++;
+        }
 
     }
 
