@@ -30,7 +30,7 @@ public class DLStack<T> implements DLStackADT<T>{
 
         T result = top.getElement();
         top = top.getNext();
-        top.setPrevious(null);
+        if (top != null) top.setPrevious(null);
         numItems--;
         return result;
         
