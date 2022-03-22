@@ -73,6 +73,9 @@ public class FindPath {
 
         
         for (int i = 0; i <= numOfNeighbours; i++) { // for loop to test all neighbouring chambers
+
+            if (currentChamber.getNeighbour(i) == null) continue;
+
             if (currentChamber.getNeighbour(i).isMarked() == false && (currentChamber.getNeighbour(i).isTreasure())) { // testing for treasure
                 return currentChamber.getNeighbour(i);
             } 
