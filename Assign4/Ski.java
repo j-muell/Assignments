@@ -76,8 +76,10 @@ public class Ski {
             return rightNode;
         } 
         
-        if (leftNodeString.equals("JumpSegment") && !rightNodeString.equals("JumpSegment")) return leftNode; // if the left node contains jump and right node does not
-        if (rightNodeString.equals("JumpSegment") && !leftNodeString.equals("JumpSegment")) return rightNode; // if the right node contains jump and left node does not
+        if (leftNodeString.equals("JumpSegment") && !rightNodeString.equals("JumpSegment")) 
+        return leftNode; // if the left node contains jump and right node does not
+        if (rightNodeString.equals("JumpSegment") && !leftNodeString.equals("JumpSegment")) 
+        return rightNode; // if the right node contains jump and left node does not
 
         if (rightNodeString.equals("SlalomSegment") && leftNodeString.equals("SlalomSegment")) {
 

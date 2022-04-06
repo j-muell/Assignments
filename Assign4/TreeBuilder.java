@@ -17,8 +17,7 @@ public class TreeBuilder<T> {
 
             // if getting children nodes you need to continue to dequeue until get a parent
             T a = dataQueue.dequeue();
-            if (dataQueue.isEmpty()) break;
-            T b = dataQueue.dequeue();
+            
             BinaryTreeNode<T> parent = parentQueue.dequeue();
 
             if (a != null) {
@@ -27,6 +26,9 @@ public class TreeBuilder<T> {
                 parentQueue.enqueue(parent.getLeft());
             }
 
+            if (dataQueue.isEmpty()) break;
+
+            T b = dataQueue.dequeue();
             if (b != null) {
                 BinaryTreeNode<T> newB = new BinaryTreeNode<T>(b);
                 parent.setRight(newB);
